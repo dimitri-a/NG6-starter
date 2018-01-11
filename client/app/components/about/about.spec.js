@@ -17,6 +17,8 @@ describe('About', () => {
     // top-level specs: i.e., routes, injection, naming
     it('About component should be visible when navigates to /about', () => {
       $location.url('/about');
+      //todo remove
+      debugger;
       $rootScope.$digest();
       expect($state.current.component).to.eq('about');
     });

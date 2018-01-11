@@ -10,6 +10,8 @@ describe('Hero', () => {
   beforeEach(inject((_$rootScope_) => {
     $rootScope = _$rootScope_;
     makeController = () => {
+      //todo remove
+      debugger;
       return new HeroController();
     };
   }));
@@ -19,11 +21,13 @@ describe('Hero', () => {
   });
 
   describe('Controller', () => {
+
     // controller specs
     it('has a name property [REMOVE]', () => { // erase if removing this.name from the controller
       let controller = makeController();
       expect(controller).to.have.property('name');
     });
+
   });
 
   describe('Template', () => {
@@ -38,7 +42,9 @@ describe('Hero', () => {
       // component/directive specs
       let component = HeroComponent;
 
+
       it('includes the intended template',() => {
+        console.log(HeroTemplate);
         expect(component.template).to.equal(HeroTemplate);
       });
 
