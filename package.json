@@ -62,7 +62,7 @@
     "build:webpack": "webpack --config config.prod.js",
     "build:dll": "webpack --config webpack.dll.js",
     "build": "npm run clean && npm run build:dll && npm run build:webpack",
-    "watch": "npm run build:dll && webpack --config webpack.dev.js --watch --progress"
+    "watch": "npm run build:dll && webpack-dev-server --config webpack.dev.js --watch --progress"
   },
   "keywords": [
     "angular",
