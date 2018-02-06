@@ -6,7 +6,8 @@
   "dependencies": {
     "angular": "^1.5.0",
     "angular-ui-router": "^1.0.0-beta.1",
-    "normalize.css": "^3.0.3"
+    "normalize.css": "^3.0.3",
+    "webpack-dev-server": "^2.11.1"
   },
   "devDependencies": {
     "angular-mocks": "^1.5.0",
@@ -40,7 +41,7 @@
     "mocha": "^2.3.0",
     "ng-annotate-loader": "0.0.10",
     "node-libs-browser": "^0.5.0",
-    "node-sass": "^3.13.0",
+    "node-sass": "^4.7.2",
     "raw-loader": "^0.5.1",
     "run-sequence": "^1.1.0",
     "sass-loader": "^4.0.2",
@@ -52,13 +53,16 @@
     "yargs": "^3.9.0"
   },
   "scripts": {
-    "build": "gulp webpack",
     "component": "gulp component",
     "serve": "gulp serve",
     "start": "gulp serve",
     "test": "karma start",
-    "watch": "gulp serve",
-    "webpack": "gulp webpack"
+    "webpack": "webpack-dev-server",
+    "clean": "rimraf dist",
+    "build:webpack": "webpack --config config.prod.js",
+    "build:dll": "webpack --config webpack.dll.js",
+    "build": "npm run clean && npm run build:dll && npm run build:webpack",
+    "watch": "npm run build:dll && webpack --config webpack.dev.js --watch --progress"
   },
   "keywords": [
     "angular",
