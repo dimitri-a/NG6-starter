@@ -47,7 +47,7 @@
     "sass-loader": "^4.0.2",
     "style-loader": "^0.12.2",
     "supports-color": "^3.1.2",
-    "webpack": "^1.13.3",
+    "webpack": "^3.10.0",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.6.0",
     "yargs": "^3.9.0"
@@ -57,7 +57,7 @@
     "serve": "gulp serve",
     "start": "gulp serve",
     "test": "karma start",
-    "webpack": "webpack-dev-server",
+    "wp": "webpack-dev-server --config webpack.dev.js",
     "clean": "rimraf dist",
     "build:webpack": "webpack --config config.prod.js",
     "build:dll": "webpack --config webpack.dll.js",
