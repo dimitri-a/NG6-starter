@@ -24,7 +24,7 @@ module.exports = {
     //Typically you'd have plenty of other plugins here as well
     new webpack.DllReferencePlugin({
       context: path.join(__dirname, "client"),
-      manifest: require("./dll/vendor-manifest.json")
+      manifest: require("./build/vendor-manifest.json")
     }),
   ],
   module: {
