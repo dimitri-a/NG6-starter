@@ -38,9 +38,9 @@ module.exports = {
           presets: ["es2015", "stage-0"]
         }
       },
-      { test: /\.(scss|sass)$/, loader: 'style!css!sass' },
-      { test: /\.html$/, loader: 'raw' },
-      { test: /\.css$/, loader: 'style!css' }
+      { test: /\.(scss|sass)$/, loader: 'style-loader' },
+      { test: /\.html$/, loader: 'raw-loader' },
+      { test: /\.css$/, loader: 'css-loader' }
     ]
   },
   resolve: {
