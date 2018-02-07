@@ -7,6 +7,9 @@ module.exports = {
     compress: true,
     port: 9000
   },
+  node: {
+    fs: 'empty'
+  },
   cache: true,
   devtool: "eval", //or cheap-module-eval-source-map
   entry: {
