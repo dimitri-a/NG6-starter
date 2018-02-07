@@ -44,16 +44,12 @@ module.exports = {
   },
 
   output: {
-    path: path.join(__dirname, "dist", "dll"),
-    filename: "dll.[name].js",
-    library: "[name]"
+    filename: 'vendor.bundle.js',
+    path: '/Users/dimitri/NG6-starter/build',
+    library: 'vendor_lib',
   },
-  plugins: [
-    new webpack.DllPlugin({
-      path: path.join(__dirname, "dll", "[name]-manifest.json"),
-      name: "[name]",
-      context: path.resolve(__dirname, "client")
-    }),
-    new webpack.optimize.UglifyJsPlugin()
-  ]
+  plugins: [new webpack.DllPlugin({
+    name: 'vendor_lib',
+    path: 'build/vendor-manifest.json',
+  })]
 };
