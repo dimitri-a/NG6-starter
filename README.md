@@ -1,5 +1,5 @@
 run: npm run watch 
-to start site
+to start site running from build dir
 
 
 

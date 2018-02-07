@@ -3,7 +3,7 @@ var webpack = require("webpack");
 
 module.exports = {
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
+    contentBase: path.join(__dirname, "build"),
     compress: true,
     port: 9000
   },
@@ -16,7 +16,7 @@ module.exports = {
     app: path.join(__dirname, "client/app", "app.js")
   },
   output: {
-    path: path.join(__dirname, "dist"),
+    path: path.join(__dirname, "build"),
     filename: "newapp.js",
     chunkFilename: "[name].js"
   },
