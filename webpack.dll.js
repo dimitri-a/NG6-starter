@@ -5,7 +5,7 @@ var webpack = require("webpack");
 
 module.exports = {
   entry: {
-    dependencies: ["angular"],
+    dependencies: ["angular","lodash"],
   },
 
   output: {

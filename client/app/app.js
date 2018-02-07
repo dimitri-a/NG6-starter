@@ -1,5 +1,5 @@
 import angular from 'angular';
-//import _ from 'lodash';
+import _ from 'lodash';
 
 angular.module('app', [])
 
