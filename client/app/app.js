@@ -17,5 +17,8 @@ angular.module('app', [
     $locationProvider.html5Mode(true).hashPrefix('!');
 
   })
+  .controller('ctrl',function($scope){
+    $scope.text='hello again';
+  })
 
   .component('app', AppComponent);
