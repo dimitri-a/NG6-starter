@@ -27,15 +27,23 @@
   <link rel="icon" href="data:;base64,iVBORw0KGgo=">
   <base href="/">
 </head>
-<body ng-app="app" ng-cloak ng-controller="ctrl">
+<body ng-app="app" ng-cloak>
 
-{{text}}
+
+<ui-view></ui-view>
+
 <app>
   Loading...
 </app>
 
+
+
 <script src="newapp.js"></script>
-<script src="./vendor.bundle.js"></script>
+<script src="vendor.bundle.js"></script>
 
 </body>
 </html>
+
+
+
+
