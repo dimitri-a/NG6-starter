@@ -19,6 +19,6 @@ angular.module('app', [
   })
   .controller('ctrl',function($scope){
     $scope.text='hello again, and again';
-    console.log('hey new');
+    console.log('hey new hsifjklsdhfksdhf');
   })
   .component('app', AppComponent);

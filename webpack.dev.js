@@ -16,7 +16,7 @@ module.exports = {
     app: path.join(__dirname, "client/app", "app.js")
   },
   output: {
-    path: path.join(__dirname, "build"),
+    path: path.join(__dirname, "buildf"),
     filename: "newapp.js",
     chunkFilename: "[name].js"
   },
@@ -34,6 +34,9 @@ module.exports = {
         loader: "babel-loader",
         include: [
           path.join(__dirname, "client") //important for performance!
+        ],
+        exclude: [
+          path.resolve(__dirname, "node_modules")
         ],
         query: {
           cacheDirectory: true, //important for performance
