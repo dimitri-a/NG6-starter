@@ -17,7 +17,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, "buildf"),
-    filename: "newapp.js",
+    filename: "ha.js",
     chunkFilename: "[name].js"
   },
   plugins: [
@@ -35,6 +35,8 @@ module.exports = {
         include: [
           path.join(__dirname, "client") //important for performance!
         ],
+        target:'node',
+        externals:[nodeExternals()],
         exclude: [
           path.resolve(__dirname, "node_modules")
         ],

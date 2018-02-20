@@ -5,7 +5,7 @@ var webpack = require("webpack");
 
 module.exports = {
   entry: {
-    dependencies: ["angular","lodash","style-loader","sass-loader","fs","fs-walk","node-sass","css-loader"],
+    dependencies: ["lodash"]
   },
   node: {
     fs: 'empty'

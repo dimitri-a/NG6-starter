@@ -1,6 +1,8 @@
 run: npm run watch 
 to start site running from build dir
 
+main config: webpack.dev.js and webpack.dll
+
 
 
 <p align="center">
