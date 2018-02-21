@@ -2,6 +2,8 @@ var path = require("path");
 var webpack = require("webpack");
 
 module.exports = {
+  target:'web',
+
   devServer: {
     contentBase: path.join(__dirname, "build"),
     compress: true,
@@ -35,7 +37,6 @@ module.exports = {
         include: [
           path.join(__dirname, "client") //important for performance!
         ],
-        target:'node',
         exclude: [
           path.resolve(__dirname, "node_modules")
         ],
@@ -50,8 +51,5 @@ module.exports = {
       { test: /\.html$/, loader: 'raw-loader' },
       { test: /\.css$/, loader: 'css-loader' }
     ]
-  },
-  resolve: {
-    extensions: [".js"]
   }
 };
