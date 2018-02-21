@@ -36,7 +36,6 @@ module.exports = {
           path.join(__dirname, "client") //important for performance!
         ],
         target:'node',
-        externals:[nodeExternals()],
         exclude: [
           path.resolve(__dirname, "node_modules")
         ],
