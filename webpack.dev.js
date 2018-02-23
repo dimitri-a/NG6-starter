@@ -2,8 +2,6 @@ var path = require("path");
 var webpack = require("webpack");
 
 module.exports = {
-  target:'web',
-
   devServer: {
     contentBase: path.join(__dirname, "build"),
     compress: true,
@@ -38,7 +36,7 @@ module.exports = {
           path.join(__dirname, "client") //important for performance!
         ],
         exclude: [
-          path.resolve(__dirname, "node_modules")
+          path.join(__dirname, "node_modules")
         ],
         query: {
           cacheDirectory: true, //important for performance
