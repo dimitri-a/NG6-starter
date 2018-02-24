@@ -28,26 +28,18 @@ module.exports = {
     }),
   ],
   module: {
-    loaders: [
-      {
-        test: /\.js?$/,
-        loader: "babel-loader",
-        include: [
-          path.join(__dirname, "client") //important for performance!
-        ],
-        exclude: [
-          path.join(__dirname, "node_modules")
-        ],
-        query: {
-          cacheDirectory: true, //important for performance
-          plugins: ["transform-regenerator"],
-          presets: ["es2015", "stage-0"]
-        }
-      },
-
-      { test: /\.(scss|sass)$/, loader: ['style-loader', 'css-loader', 'sass-loader'] },
-      { test: /\.html$/, loader: 'raw-loader' },
-      { test: /\.css$/, loader: 'css-loader' }
-    ]
-  }
+    rules: [{
+        test: /\.scss$/,
+        use: [{
+            loader: "style-loader"
+        }, {
+            loader: "css-loader"
+        }, {
+            loader: "sass-loader",
+            options: {
+                includePaths: ["node_modules/bourbon/app/assets/stylesheets"]
+            }
+        }]
+    }]
+}
 };
