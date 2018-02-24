@@ -28,7 +28,24 @@ module.exports = {
     }),
   ],
   module: {
-    rules: [{
+    rules: [
+      {
+        test: /\.js?$/,
+        loader: "babel-loader",
+        include: [
+          path.join(__dirname, "client") //important for performance!
+        ],
+        exclude: [
+          path.join(__dirname, "node_modules")
+        ],
+        query: {
+          cacheDirectory: true, //important for performance
+          plugins: ["transform-regenerator"],
+          presets: ["es2015", "stage-0"]
+        }
+      },
+      { test: /\.html$/, loader: 'raw-loader' }
+      ,{
         test: /\.scss$/,
         use: [{
             loader: "style-loader"
